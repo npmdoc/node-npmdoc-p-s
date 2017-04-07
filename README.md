@@ -1,0 +1,174 @@
+# api documentation for  [p-s (v4.1.0)](https://github.com/kentcdodds/nps#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-p-s.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-p-s) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-p-s.svg)](https://travis-ci.org/npmdoc/node-npmdoc-p-s)
+#### All the benefits of npm scripts without the cost of a bloated package.json and limits of json
+
+[![NPM](https://nodei.co/npm/p-s.png?downloads=true)](https://www.npmjs.com/package/p-s)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-p-s/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-p-s_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-p-s/build/apidoc.html)
+
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-p-s/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-p-s/build/screenCapture.npmPackageDependencyTree.svg)
+
+
+
+# package.json
+
+```json
+
+{
+    "author": {
+        "name": "Kent C. Dodds",
+        "email": "kent@doddsfamily.us",
+        "url": "http://kentcdodds.com/"
+    },
+    "bin": {
+        "nps": "./dist/bin/nps.js"
+    },
+    "bugs": {
+        "url": "https://github.com/kentcdodds/nps/issues"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "arrify": "^1.0.1",
+        "chalk": "^1.1.3",
+        "common-tags": "^1.4.0",
+        "find-up": "^2.1.0",
+        "js-yaml": "^3.7.0",
+        "lodash": "^4.17.4",
+        "manage-path": "^2.0.0",
+        "prefix-matches": "^0.0.9",
+        "prettier-eslint-cli": "^1.1.1",
+        "readline-sync": "^1.4.6",
+        "spawn-command-with-kill": "^1.0.0",
+        "type-detect": "^4.0.0",
+        "yargs": "^6.6.0"
+    },
+    "deprecated": "this has been renamed to nps. Uninstall p-s and install nps instead",
+    "description": "All the benefits of npm scripts without the cost of a bloated package.json and limits of json",
+    "devDependencies": {
+        "all-contributors-cli": "^3.1.0",
+        "babel-cli": "^6.22.2",
+        "babel-eslint": "^7.1.1",
+        "babel-jest": "^18.0.0",
+        "babel-plugin-module-resolver": "^2.5.0",
+        "babel-preset-env": "^1.1.8",
+        "babel-preset-stage-2": "^6.22.0",
+        "babel-register": "^6.22.0",
+        "cli-tester": "^2.0.0",
+        "codecov": "^1.0.1",
+        "commitizen": "^2.9.5",
+        "concurrently": "^3.3.0",
+        "cross-env": "^3.1.4",
+        "cz-conventional-changelog": "^1.2.0",
+        "eslint": "^3.15.0",
+        "eslint-config-kentcdodds": "^11.1.0",
+        "husky": "^0.13.1",
+        "jest-cli": "^18.1.0",
+        "lint-staged": "^3.3.0",
+        "nps": "*",
+        "opt-cli": "^1.5.1",
+        "rimraf": "^2.5.4",
+        "semantic-release": "^6.3.6",
+        "sinon": "^1.17.7",
+        "validate-commit-msg": "^2.11.1"
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "5d81bcecfb47d5aa5c6b8d3a0e11d243ad1e79ca",
+        "tarball": "https://registry.npmjs.org/p-s/-/p-s-4.1.0.tgz"
+    },
+    "eslintConfig": {
+        "extends": [
+            "kentcdodds",
+            "kentcdodds/jest"
+        ],
+        "rules": {
+            "max-len": [
+                "error",
+                80
+            ]
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "gitHead": "d221a78e9a4847b26ea55e6ca0aba8038a67711b",
+    "homepage": "https://github.com/kentcdodds/nps#readme",
+    "keywords": [],
+    "license": "MIT",
+    "lint-staged": {
+        "*.js": [
+            "prettier-eslint --write --ignore \"**/fixtures/**\"",
+            "git add"
+        ]
+    },
+    "main": "dist/index",
+    "maintainers": [
+        {
+            "name": "kentcdodds",
+            "email": "kent@doddsfamily.us"
+        }
+    ],
+    "name": "p-s",
+    "optionalDependencies": {},
+    "readme": "ERROR: No README data found!",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kentcdodds/nps.git"
+    },
+    "scripts": {
+        "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
+        "localstart": "npm start build && node ./dist/bin/nps.js",
+        "precommit": "opt --in pre-commit --exec \"npm start validate\"",
+        "start": "nps",
+        "test": "nps test"
+    },
+    "version": "4.1.0"
+}
+```
+
+
+
+# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
+
+#### [module p-s](#apidoc.module.p-s)
+1.  [function <span class="apidocSignatureSpan">p-s.</span>default (_ref)](#apidoc.element.p-s.default)
+
+
+
+# <a name="apidoc.module.p-s"></a>[module p-s](#apidoc.module.p-s)
+
+#### <a name="apidoc.element.p-s.default"></a>[function <span class="apidocSignatureSpan">p-s.</span>default (_ref)](#apidoc.element.p-s.default)
+- description and source-code
+```javascript
+function runPackageScripts(_ref) {
+  var scriptConfig = _ref.scriptConfig,
+      scripts = _ref.scripts,
+      _ref$options = _ref.options,
+      options = _ref$options === undefined ? {} : _ref$options;
+
+  if (scripts.length === 0) {
+    scripts = ['default'];
+  }
+  var scriptNames = (0, _arrify2.default)(scripts);
+
+  return scriptNames.reduce(function (res, input) {
+    return res.then(function () {
+      return runPackageScript({ scriptConfig, options, input });
+    });
+  }, Promise.resolve());
+}
+```
+- example usage
+```shell
+n/a
+```
+
+
+
+# misc
+- this document was created with [utility2](https://github.com/kaizhu256/node-utility2)
