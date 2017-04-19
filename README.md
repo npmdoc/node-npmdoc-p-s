@@ -1,9 +1,14 @@
-# api documentation for  [p-s (v4.1.0)](https://github.com/kentcdodds/nps#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-p-s.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-p-s) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-p-s.svg)](https://travis-ci.org/npmdoc/node-npmdoc-p-s)
+# npmdoc-p-s
+
+#### api documentation for  [p-s (v4.1.0)](https://github.com/kentcdodds/nps#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-p-s.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-p-s) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-p-s.svg)](https://travis-ci.org/npmdoc/node-npmdoc-p-s)
+
 #### All the benefits of npm scripts without the cost of a bloated package.json and limits of json
 
-[![NPM](https://nodei.co/npm/p-s.png?downloads=true)](https://www.npmjs.com/package/p-s)
+[![NPM](https://nodei.co/npm/p-s.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/p-s)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-p-s/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-p-s_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-p-s/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-p-s/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-p-s/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-p-s/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-p-s/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-p-s/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Kent C. Dodds",
-        "email": "kent@doddsfamily.us",
         "url": "http://kentcdodds.com/"
     },
     "bin": {
@@ -109,13 +113,11 @@
     "main": "dist/index",
     "maintainers": [
         {
-            "name": "kentcdodds",
-            "email": "kent@doddsfamily.us"
+            "name": "kentcdodds"
         }
     ],
     "name": "p-s",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kentcdodds/nps.git"
@@ -129,43 +131,6 @@
     },
     "version": "4.1.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module p-s](#apidoc.module.p-s)
-1.  [function <span class="apidocSignatureSpan">p-s.</span>default (_ref)](#apidoc.element.p-s.default)
-
-
-
-# <a name="apidoc.module.p-s"></a>[module p-s](#apidoc.module.p-s)
-
-#### <a name="apidoc.element.p-s.default"></a>[function <span class="apidocSignatureSpan">p-s.</span>default (_ref)](#apidoc.element.p-s.default)
-- description and source-code
-```javascript
-function runPackageScripts(_ref) {
-  var scriptConfig = _ref.scriptConfig,
-      scripts = _ref.scripts,
-      _ref$options = _ref.options,
-      options = _ref$options === undefined ? {} : _ref$options;
-
-  if (scripts.length === 0) {
-    scripts = ['default'];
-  }
-  var scriptNames = (0, _arrify2.default)(scripts);
-
-  return scriptNames.reduce(function (res, input) {
-    return res.then(function () {
-      return runPackageScript({ scriptConfig, options, input });
-    });
-  }, Promise.resolve());
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
